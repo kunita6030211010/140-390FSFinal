@@ -7,7 +7,7 @@ var app = express();
 var cors = require('cors');       
 
 // #2 Add body-parser package to the app
-app.use(express.cors('cors'));
+var bodyParser = require('body-parser');
 // ===============================
 
 
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // #3 Serve static content in folder frontend
-var products = require('./api/products', function (req, res){}
+var products = require('./api');
 // ===============================
 
 
