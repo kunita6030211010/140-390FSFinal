@@ -56,7 +56,7 @@ $(function () {
 
         // #13 Add new products by calling api
         // use $.post
-        
+        $.post("demo_ajax_gen")
         // ===============================
 
     });
