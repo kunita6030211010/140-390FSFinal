@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // #3 Serve static content in folder frontend
-var products = require('./api');
+
 // ===============================
 
 
@@ -33,7 +33,9 @@ router.get('/products', products.getAllProducts);
 router.get('/products/:pid', products.getProductById);
 
 // #4 Complete the routing for POST, PUT, DELETE
-
+router.post('/products/:pid', products.addProduct);
+router.put('/products/:pid', products.updateProductById);
+router.delete('/products/:pid', products.deleteProductById);
 // ===============================
 
 
