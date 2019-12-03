@@ -30,7 +30,11 @@ function updateProductById(req, res) {
     var payload = req.body
     var pid = req.params.pid;    
     // #7 Update a product by ID (findByIdAndUpdate)
-
+    var updateproduct = req.body;
+    Product.findByIdAndUpdate(id, updateproduct, function(err){
+        if (err) res.status(500).json(err);
+        res.json({status: "Updated a product"});
+    })
     // ===============================
 }
 
