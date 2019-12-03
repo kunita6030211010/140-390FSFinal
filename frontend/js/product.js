@@ -9,7 +9,7 @@ $(function () {
         $("#plist").empty();
         // #12 Get all products and display as a table
         // use $.get
-
+        $("#products").addClass("display-1");   
         // ===============================
     }
     
@@ -30,7 +30,7 @@ $(function () {
 
         // #13 Add new products by calling api
         // use $.post
-
+        
         // ===============================
 
     });
