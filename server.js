@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // #3 Serve static content in folder frontend
-
+app.use(express.static('www'));
 // ===============================
 
 
@@ -44,6 +44,8 @@ router.delete('/products/:pid', products.deleteProductById);
 app.use('/api', cors(), router);
 
 // #10 Start the server
-
+var port = process.env.PORT || 8080;
+app.listen(port, function () {
 // ===============================
 console.log('Magic happens on http://localhost:' + port);
+});
